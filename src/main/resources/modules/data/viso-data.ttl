@@ -112,6 +112,9 @@ viso-data:Independent_Variable
       rdfs:subClassOf viso-data:Variable_Role ;
       swstatus:term_status
               "stable"^^xsd:string .
+              
+viso-data:Interval
+      rdf:type owl:Class .
 
 viso-data:Interval_Scale_of_Measurement
       rdf:type owl:Class ;
@@ -341,7 +344,23 @@ viso-data:is_weighted
       rdf:type owl:DatatypeProperty ;
       rdfs:domain viso-data:Relation ;
       rdfs:range xsd:boolean .
+
+viso-data:maxExclusive
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain viso-data:Interval .
+  
+viso-data:maxInclusive
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain viso-data:Interval .
       
+viso-data:minExclusive
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain viso-data:Interval .
+      
+viso-data:minInclusive
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain viso-data:Interval .
+
 viso-data:planar
       rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
       rdfs:range xsd:boolean ;

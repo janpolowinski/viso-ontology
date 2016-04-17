@@ -364,6 +364,11 @@ viso-graphic:color_hsl_lightness
                 owl:unionOf (viso-graphic:Brightness viso-graphic:Color viso-graphic:Graphic_Object)
               ] ;
       rdfs:range xsd:float ;
+      viso-graphic:max_value_range
+      		  [ a viso-data:Interval;
+      		    viso-data:minInclusive "0"^^xsd:int;
+      		    viso-data:maxInclusive "100"^^xsd:int
+      		  ] ;
       rdfs:subPropertyOf viso-data:has_quantitative_value , viso-graphic:has_non-spatial_graphic_attribute ;
       swstatus:term_status
               "stable"^^xsd:string .
@@ -495,6 +500,13 @@ viso-graphic:labels
       rdfs:subPropertyOf viso-graphic:has_n-ary_graphic_o_2_o_relation_to ;
       viso-graphic:default_neutral_value
               viso-graphic:Not_Set .
+              
+viso-graphic:max_value_range
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain viso-graphic:GraphicAttributeContinuous ;
+      rdfs:range viso-data:Interval ;
+	  rdfs:label "max value range"^^xsd:string ;
+	  dct:description "Maximum range of values that a graphic attribute can take."^^xsd:string .
               
  viso-graphic:x_position
       rdf:type viso-graphic:GraphicAttributeContinuous , owl:DatatypeProperty ;
