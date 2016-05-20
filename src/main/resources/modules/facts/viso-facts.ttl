@@ -59,14 +59,24 @@ viso-facts:appropriate_to_visualize
 """^^xsd:string ;
       skos:related viso-facts:not_appropriate_to_visualize .
       
-viso-facts:expresses
+viso-facts:can_express
       rdf:type owl:ObjectProperty ;
       rdfs:domain viso-graphic:GraphicRelation ;
       dct:description "The expressiveness criteria and the facts given in this data set are based on the the Figure \"Figure 25 - Expressiveness of Retinal Techniques\" (p. 130) from Jock Mackinlay in „Automating the design of graphical presentations of relational information“, ACM Trans. Graph. 5, Nr. 2 (1986): 110-141 ."^^xsd:string ;
       swstatus:term_status
               "stable"^^xsd:string ;
-      skos:example "Visual means \"A\" expresses \"Nominal Data\" means that \"A\" can express nominal data. It does not state something on how well it is suited for this purpose or how effective it is."^^xsd:string ;
+      skos:example "Visual means \"A\" can express \"Nominal Data\" means that \"A\" can express nominal data. It does not state something on how well it is suited for this purpose or how effective it is."^^xsd:string ;
       skos:related viso-facts:appropriate_to_visualize , viso-facts:has_effectiveness_ranking_value , viso-facts:not_appropriate_to_visualize .
+      
+viso-facts:can_not_express
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain viso-graphic:GraphicRelation ;
+      rdfs:subPropertyOf viso-facts:not_appropriate_to_visualize .
+      
+viso-facts:expresses
+	  owl:deprecated "true"^^xsd:boolean ;
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain viso-graphic:GraphicRelation .
 
 viso-facts:has_effectiveness_ranking_for_nominal_data
       rdf:type owl:DatatypeProperty ;
@@ -110,6 +120,7 @@ viso-facts:not_appropriate_to_visualize
       skos:related viso-facts:appropriate_to_visualize .
 
 viso-facts:not_expresses
+	  owl:deprecated "true"^^xsd:boolean ;
       rdf:type owl:ObjectProperty ;
       rdfs:domain viso-graphic:GraphicRelation ;
       rdfs:subPropertyOf viso-facts:not_appropriate_to_visualize .
