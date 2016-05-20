@@ -55,17 +55,28 @@ viso-facts:appropriate_to_visualize
       rdf:type owl:ObjectProperty ;
       rdfs:domain viso-graphic:GraphicRelation ;
       rdfs:subPropertyOf viso-facts:expresses ;
-      dct:description """States that a visual means is not only expressive enough to encode some data classification type (such as ordinal data), but that is also appropriate/acceptable/suitable to encode it. The appropriateness criteria and the facts given in this data set are based on the the Figure \"Fig. 3-26\" in: JÃ¶rg Engelhardt, von, â€žThe Language of Graphicsâ€œ (Institute for Logic, Language & Computation, University of Amsterdam., 2002). This is in turns based on a figure from MacEachren (p. 272) in: A. M MacEachren, How maps work (Guilford Press New York, 1995).
+      dct:description """States that a visual means is not only expressive enough to encode some data classification type (such as ordinal data), but that is also appropriate/acceptable/suitable to encode it. The appropriateness criteria and the facts given in this data set are based on the the Figure \"Fig. 3-26\" in: Jšrg Engelhardt, von, âThe Language of Graphicsâ (Institute for Logic, Language & Computation, University of Amsterdam., 2002). This is in turns based on a figure from MacEachren (p. 272) in: A. M MacEachren, How maps work (Guilford Press New York, 1995).
 """^^xsd:string ;
       skos:related viso-facts:not_appropriate_to_visualize .
-      
-viso-facts:expresses
+
+viso-facts:can_express
       rdf:type owl:ObjectProperty ;
       rdfs:domain viso-graphic:GraphicRelation ;
-      dct:description "The expressiveness criteria and the facts given in this data set are based on the the Figure \"Figure 25 - Expressiveness of Retinal Techniques\" (p. 130) from Jock Mackinlay in â€žAutomating the design of graphical presentations of relational informationâ€œ, ACM Trans. Graph. 5, Nr. 2 (1986): 110-141 ."^^xsd:string ;
+      dct:description "The expressiveness criteria and the facts given in this data set are based on the the Figure \"Figure 25 - Expressiveness of Retinal Techniques\" (p. 130) from Jock Mackinlay in âAutomating the design of graphical presentations of relational information, ACM Trans. Graph. 5, Nr. 2 (1986): 110-141 ."^^xsd:string ;
       swstatus:term_status
               "stable"^^xsd:string ;
-      skos:example "Visual means \"A\" expresses \"Nominal Data\" means that \"A\" can express nominal data. It does not state something on how well it is suited for this purpose or how effective it is."^^xsd:string ;
+      skos:example "Visual means \"A\" can express \"Nominal Data\" means that \"A\" can express nominal data. It does not state something on how well it is suited for this purpose or how effective it is."^^xsd:string ;
+      skos:related viso-facts:appropriate_to_visualize , viso-facts:has_effectiveness_ranking_value , viso-facts:not_appropriate_to_visualize .
+
+viso-facts:can_not_express
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain viso-graphic:GraphicRelation ;
+      rdfs:subPropertyOf viso-facts:not_appropriate_to_visualize .
+      
+viso-facts:expresses
+	  owl:deprecated "true"^^xsd:boolean ;
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain viso-graphic:GraphicRelation ;
       skos:related viso-facts:appropriate_to_visualize , viso-facts:has_effectiveness_ranking_value , viso-facts:not_appropriate_to_visualize .
 
 viso-facts:has_effectiveness_ranking_for_nominal_data
@@ -110,6 +121,7 @@ viso-facts:not_appropriate_to_visualize
       skos:related viso-facts:appropriate_to_visualize .
 
 viso-facts:not_expresses
+	  owl:deprecated "true"^^xsd:boolean ;
       rdf:type owl:ObjectProperty ;
       rdfs:domain viso-graphic:GraphicRelation ;
       rdfs:subPropertyOf viso-facts:not_appropriate_to_visualize .
