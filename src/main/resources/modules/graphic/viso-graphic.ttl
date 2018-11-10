@@ -450,12 +450,12 @@ viso-graphic:contains
       dct:description <http://www-st.inf.tu-dresden.de/semvis/ontologies/rvl/img/avm_containment_simple.png> .
  
 viso-graphic:has_graphic_attribute
-      rdf:type owl:FunctionalProperty ;
+#      rdf:type owl:FunctionalProperty ;
       rdfs:label "has graphic attribute"^^xsd:string ;
       rdfs:subPropertyOf viso-graphic:graphic_relations .
       
 viso-graphic:has_non-spatial_graphic_attribute
-      rdf:type owl:FunctionalProperty ;
+#      rdf:type owl:FunctionalProperty ;
       rdfs:label "has non-spatial graphic attribute"^^xsd:string ;
       rdfs:subPropertyOf viso-graphic:has_graphic_attribute .
  
