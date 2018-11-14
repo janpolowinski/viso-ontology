@@ -11,7 +11,12 @@
 @prefix viso-graphic:  <http://purl.org/viso/graphic/> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-viso-activity: a owl:Ontology .
+viso-activity:
+      rdf:type owl:Ontology ;
+      rdfs:label "Activity module of the Visualisation Ontology (VISO)"@en , "Aktivitäts-Modul der Visualisierungsontologie (VISO)"@de ;
+      dct:creator <http://purl.org/viso/JanPolowinski> , <http://purl.org/viso/MartinVoigt> ;
+      dct:description "The activity module of VISO decribes tasks, actions an methods related to the visualisation process."@en ;
+      owl:versionInfo "Work in Progress"^^xsd:string .
 
 ### WIP - COPYING STATEMENTS FROM THE LEGAY ONTOLOGY TO THIS MODULE HAS TO BE COMPLETED ###
 
